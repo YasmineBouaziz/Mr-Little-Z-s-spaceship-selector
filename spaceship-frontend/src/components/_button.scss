@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+$accent: #F64740;
+$accentHover: #A22D28;
+$white: #FAFAFA;
+$duration: 0.5s;
+$ease: cubic-bezier(0.68, 0.15, 0.31, 1.05);
+$f-cta--large: 18px;
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items:center;
+}
+
+
+.button-upload {
+    border: none;
+  color: white;
+  padding: 5px 180px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family:"Montserrat";
+	background-color: $accent;
+	box-shadow: 0px 0px 16px $accent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	flex-direction: column;
+	border: none;
+	transition: all $duration $ease;
+  margin: 0 auto;
+  display: block;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $accentHover;
+		.button-upload__logo--complete {
+			animation: rocketAnimation 2s $ease forwards;
+		}
+	}
+
+	&__logo {
+		width: 4.2rem;
+	}
+	&__text {
+		font-size: $f-cta--large;
+		font-weight: 800;
+		display: block;
+		margin-top: 0.8rem;
+	}
+
+	@keyframes rocketAnimation {
+		0% {
+			transform: rotate(49deg 18px 17px);
+		}
+		25% {
+			transform: rotate(0deg) translateX(6px);
+		}
+		50% {
+			transform: translateY(-45px) translateX(6px);
+		}
+		60% {
+			transform: translateY(30px) translateX(6px);
+		}
+		70% {
+			opacity: 0;
+		}
+		90% {
+			transform: translateY(0px) translateX(6px);
+			opacity: 1;
+		}
+		100% {
+			transform: rotate(49deg 18px 17px);
+		}
+	}
+}

@@ -1,0 +1,113 @@
+
+body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(https://i.imgur.com/oIrQl4q.gif);
+  background-size: 75px;
+  color: white;
+
+}
+
+ .App {
+  text-align: center;
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */ */
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+form {
+  /* background-color: rgba(55, 55, 55, 0.5)
+  ; */
+  outline-style: solid;  padding: 2.5rem 0.625rem;
+  outline-color:rgb(255, 255, 255, 0.5);
+  border-radius: 5%;
+  padding: 50px;
+}
+
+.ValueSelectColours{
+  margin-right: 200px;
+}
+
+input:hover{
+  cursor: pointer;
+}
+
+.selectcolours{
+  margin-bottom: 20px;
+}
+
+.sub-btn{
+  margin-top: 20px;
+}
+
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+}
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
+}
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid rgb(161, 45, 40);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+span{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+.CustomDropdown{
+  flex-direction: row;
+}

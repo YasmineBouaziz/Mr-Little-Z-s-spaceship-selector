@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/send-query", methods=["POST"])
 def members():
     data = request.json
-    print(data)
+    # print(data)
     query = construct_query(data)
     print(query)
     # If a DB existed the query would be sent to the DB here and the response would be returned

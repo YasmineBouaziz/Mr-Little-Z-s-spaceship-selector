@@ -17,7 +17,7 @@ def add_colours_to_query(use_colours, query, colours):
 
 
 def construct_query(data):
-    base_query = "SELECT * FROM spaceships WHERE ("
+    base_query = "\nSELECT * FROM spaceships WHERE ("
     base_query = (
         add_colours_to_query(
             use_colours=data["useTheseColours"],
@@ -33,5 +33,5 @@ def construct_query(data):
         data["date"],
         MAPPINGS[data["hasPulseLaser"]],
     )
-    base_query += f" date {date_type} {date} AND {has_pulse_laser} pulse_laser"
+    base_query += f" date {date_type} {date} AND {has_pulse_laser} pulse_laser\n"
     return base_query

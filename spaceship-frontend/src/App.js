@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import "react-dropdown/style.css";
 import Intro from './components/intro';
 import Button from './components/button';
-
-
 import MultiValueSelectColours from "./components/colourComponent";
 import CustomDropdown from "./components/dropdownComponent";
 

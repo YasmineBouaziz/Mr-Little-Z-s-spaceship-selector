@@ -47,65 +47,35 @@ function App() {
 
   return (
 <div className="App">
-      <header className="App-header">
-      < Intro />
-
-        <form>
-        <h3>Enter your choice of colours</h3>
-
-          <div className="selectcolours">
-            <div className="colour-check">
-            <label>
-            <input type="checkbox" onChange={handleChangeColours} />
-            <span>
-              Not these colours
-            </span>
-          </label>
-          </div>
-          <MultiValueSelectColours
-
-        setSelectedColours={setSelectedColours}
-        ></MultiValueSelectColours>
-            </div>
-          <h3>Enter your choice of speed</h3>
-          <CustomDropdown
-            dropdownOnChange={setSpeedType}
-            setInputValue={setSpeedAmount}
-            inputType="number"
-            inputPlaceholder="Speed amount"
-            options={["Less than", "More than", "Exactly"]}
-            min="50"
-            max="200"
-          ></CustomDropdown>
-          <h3>Enter your choice of production date</h3>
-
-          <CustomDropdown
-            dropdownOnChange={setDateType}
-            setInputValue={setSelectedDate}
-            inputType="date"
-            inputPlaceholder="Date of production"
-            options={["After", "Before", "On the exact date"]}
-            min="1980-01-01"
-            max="2021-01-01"
-          ></CustomDropdown>
+  <header className="App-header">
+    < Intro />
+    <form>
+      <h3>Enter your choice of colours</h3>
+      <div className="selectcolours">
+        <div className="colour-check">
           <label>
-            <input type="checkbox" onChange={handleChangeLaser} />
-            <span>
-              Has pulse laser
-            </span>
+            <input type="checkbox" onChange={handleChangeColours} />
+            <span> Not these colours </span>
           </label>
-          <div className="sub-btn">
-
-          <div type="submit" value="Send Query" onClick={submitOnClick}>
-          <Button/>
-          </div>
-          </div>
-          {/* <button type="submit" value="Send Query" onClick={submitOnClick}>
-            Send Query
-          </button> */}
-        </form>
-      </header>
-    </div>
+        </div>
+        <MultiValueSelectColours setSelectedColours={setSelectedColours}></MultiValueSelectColours>
+      </div>
+      <h3>Enter your choice of speed</h3>
+      <CustomDropdown dropdownOnChange={setSpeedType} setInputValue={setSpeedAmount} inputType="number" inputPlaceholder="Speed amount" options={["Less than", "More than" , "Exactly" ]} min="50" max="200"></CustomDropdown>
+      <h3>Enter your choice of production date</h3>
+      <CustomDropdown dropdownOnChange={setDateType} setInputValue={setSelectedDate} inputType="date" inputPlaceholder="Date of production" options={["After", "Before" , "On the exact date" ]} min="1980-01-01" max="2021-01-01"></CustomDropdown>
+      <label>
+        <input type="checkbox" onChange={handleChangeLaser} />
+        <span> Has pulse laser </span>
+      </label>
+      <div className="sub-btn">
+        <div type="submit" value="Send Query" onClick={submitOnClick}>
+          <Button />
+        </div>
+      </div> {/* <button type="submit" value="Send Query" onClick={submitOnClick}> Send Query </button> */}
+    </form>
+  </header>
+</div>
   );
 }
 

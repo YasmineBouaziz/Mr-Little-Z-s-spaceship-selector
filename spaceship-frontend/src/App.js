@@ -7,7 +7,7 @@ import MultiValueSelectColours from "./components/colourComponent";
 import CustomDropdown from "./components/dropdownComponent";
 
 function App() {
-  const [useTheseColours, setUseTheseColours] = useState([]);
+  const [useTheseColours, setUseTheseColours] = useState(false);
   const [selectedColours, setSelectedColours] = useState([]);
   const [speedType, setSpeedType] = useState([]);
   const [speedAmount, setSpeedAmount] = useState([]);
